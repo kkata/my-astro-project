@@ -1,0 +1,47 @@
+---
+// JS/TS Code written in between the (---) code fence,
+// is ran solely on the Server!
+console.log('See me in the Terminal!')
+
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+import Heading1 from '../components/Heading.astro'
+import Welcome from '../components/Welcome.astro'
+
+const items = ["Dog", "Cat", "Platipus"];
+---
+
+<BaseLayout title="Homepage">
+  <h1>Hello, World!</h1>
+  <p>this is index page.</p>
+  <Heading1 text="This is props text." />
+  <Welcome>
+    <h2 slot="header">Welcome Everyone!</h2>
+    <p>Lorem ipsum ...</p>
+  </Welcome>
+  <ul>
+    {items.map((item) => (
+      <>
+        <li>Red {item}</li>
+        <li>Blue {item}</li>
+        <li>Green {item}</li>
+      </>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style lang='scss'>
+  body{
+    h1{
+      color:orange;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<script>
+ // JS Code entered here is ran entirely on the Browser
+ console.log('See me in the devTools')
+</script>
