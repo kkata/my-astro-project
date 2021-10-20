@@ -9,6 +9,8 @@ import Heading1 from '../components/Heading.astro'
 import Welcome from '../components/Welcome.astro'
 
 const items = ["Dog", "Cat", "Platipus"];
+
+import VueCounter from '../components/VueCounter.vue';
 ---
 
 <BaseLayout title="Homepage">
@@ -28,9 +30,10 @@ const items = ["Dog", "Cat", "Platipus"];
       </>
     ))}
   </ul>
+  <VueCounter client:visible />
 </BaseLayout>
 
-<style lang='scss'>
+<style lang="scss" scoped>
   body{
     h1{
       color:orange;
