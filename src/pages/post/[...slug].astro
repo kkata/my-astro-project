@@ -1,0 +1,9 @@
+---
+// Example: src/pages/post/[...slug].astro
+export async function getStaticPaths() {
+  return [
+    { params: { slug: "a/b/c" } }
+  ];
+}
+---
+<p>[...slug].astro page</p>
