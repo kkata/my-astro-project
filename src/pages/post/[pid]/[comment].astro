@@ -1,0 +1,10 @@
+---
+// Example: src/pages/post/[pid]/[comment].astro
+export async function getStaticPaths() {
+  return [
+    { params: { pid: "abc", comment: "a-comment" } }
+  ];
+}
+const {pid} = Astro.request.params;
+---
+<p>Post: {pid}</p>
