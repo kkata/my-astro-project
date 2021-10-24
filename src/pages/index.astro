@@ -11,9 +11,11 @@ import Welcome from '../components/Welcome.astro'
 const items = ["Dog", "Cat", "Platipus"];
 
 import VueCounter from '../components/VueCounter.vue';
+import Demo from '../components/Demo.vue';
 ---
 
 <BaseLayout title="Homepage">
+  <Demo client:visible />
   <h1>Hello, World!</h1>
   <p>this is index page.</p>
   <Heading1 text="This is props text." />
