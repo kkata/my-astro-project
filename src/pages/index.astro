@@ -1,17 +1,13 @@
 ---
-// JS/TS Code written in between the (---) code fence,
-// is ran solely on the Server!
-console.log('See me in the Terminal!')
-
 import BaseLayout from '../layouts/BaseLayout.astro'
-
 import Heading1 from '../components/Heading.astro'
 import Welcome from '../components/Welcome.astro'
+import VueCounter from '../components/VueCounter.vue';
+import Demo from '../components/Demo.vue';
 
 const items = ["Dog", "Cat", "Platipus"];
 
-import VueCounter from '../components/VueCounter.vue';
-import Demo from '../components/Demo.vue';
+console.log('See me in the Terminal!');
 ---
 
 <BaseLayout title="Homepage">
@@ -25,11 +21,9 @@ import Demo from '../components/Demo.vue';
   </Welcome>
   <ul>
     {items.map((item) => (
-      <>
-        <li>Red {item}</li>
-        <li>Blue {item}</li>
-        <li>Green {item}</li>
-      </>
+      <li>Red {item}</li>
+      <li>Blue {item}</li>
+      <li>Green {item}</li>
     ))}
   </ul>
   <VueCounter client:visible />
