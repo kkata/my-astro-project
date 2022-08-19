@@ -6,6 +6,6 @@ export async function getStaticPaths() {
     { params: { pid: "2" } }
   ];
 }
-const {pid} = Astro.request.params;
+const {pid} = Astro.params;
 ---
 <p>Post: {pid}</p>

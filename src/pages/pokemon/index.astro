@@ -4,6 +4,7 @@ const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=150`);
 const result = await response.json();
 const allPokemon = result.results;
 const firstPage = allPokemon.slice(0, 10);
+const { page } = Astro.props;
 ---
 
 <strong>Pokemons:</strong>
@@ -11,7 +12,7 @@ const firstPage = allPokemon.slice(0, 10);
 <br>
 
 {firstPage.map(p => {
-    return `<a href="/pokemon/${p.name}">View ${p.name}</a><br>`;
+    return <a href={"/pokemon/" + p.name}>View {p.name}</a><br>;
 })}
 
 <br>

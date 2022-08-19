@@ -1,5 +1,6 @@
+import vue from "@astrojs/vue";
+
 export default {
-  devOptions: {
-    port: 1234,
-  },
+  server: { port: 1234, host: true },
+  integrations: [vue()],
 };
