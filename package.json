@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@astrojs/vue": "^1.0.0",
     "astro": "^1.0.6"
   },
   "devDependencies": {
