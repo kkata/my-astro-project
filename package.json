@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "astro": "^1.0.6"
+  },
+  "devDependencies": {
+    "sass": "^1.54.4"
   }
 }
